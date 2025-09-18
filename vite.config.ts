@@ -6,6 +6,9 @@
   export default defineConfig({
     plugins: [react()],
     base: '/Portfolio/',
+    build: {
+    outDir: 'dist'
+  },
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -50,10 +53,7 @@
         '@': path.resolve(__dirname, './src'),
       },
     },
-    build: {
-      target: 'esnext',
-      outDir: 'build',
-    },
+   
     server: {
       port: 3000,
       open: true,
